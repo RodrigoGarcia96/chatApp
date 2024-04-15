@@ -114,12 +114,12 @@ class _ChatPageState extends State<ChatPage> {
       builder: (context, snapshot) {
         // errors
         if (snapshot.hasError) {
-          return const Text("Error");
+          return const Text("E R R O R");
         }
 
         // loading
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return const Text("Loading..");
+          return const Text("C A R G A N D O . . .");
         }
 
         // return list view

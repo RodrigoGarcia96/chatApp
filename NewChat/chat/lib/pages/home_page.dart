@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: const Text("Home"),
+        title: const Text("C H A T S"),
         backgroundColor: Colors.transparent,
         foregroundColor: Colors.grey,
         elevation: 0,
@@ -34,12 +34,12 @@ class HomePage extends StatelessWidget {
         builder: (context, snapshot) {
           //error
           if (snapshot.hasError) {
-            return const Text("Error");
+            return const Text("E R R O R");
           }
 
           //loading..
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Text("Loading.. ");
+            return const Text("C A R G A N D O . . .");
           }
 
           //return list view

@@ -44,7 +44,7 @@ class RegisterPage extends StatelessWidget {
       showDialog(
         context: context,
         builder: (context) => const AlertDialog(
-          title: Text("Password don´t match!"),
+          title: Text("¡LA CONTRASEÑA NO COINCIDE!"),
         ),
       );
     }
