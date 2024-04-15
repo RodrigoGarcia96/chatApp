@@ -91,7 +91,7 @@ class RegisterPage extends StatelessWidget {
 
             //pw textfield
             MyTextField(
-              hintText: "Password",
+              hintText: "Contraseña",
               obscureText: true,
               controller: _pwController,
             ),
@@ -100,7 +100,7 @@ class RegisterPage extends StatelessWidget {
 
             //Confirmpw textfield
             MyTextField(
-              hintText: "Confirm Password",
+              hintText: "Confirma tu contraseña",
               obscureText: true,
               controller: _confirmPwController,
             ),
@@ -109,7 +109,7 @@ class RegisterPage extends StatelessWidget {
 
             //login button
             MyButton(
-              text: "Register",
+              text: "Registrar",
               onTap: () => register(context),
             ),
 
@@ -119,12 +119,12 @@ class RegisterPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Already have an account",
+                Text("¿Ya tienes cuenta? ",
                     style: TextStyle(
                         color: Theme.of(context).colorScheme.primary)),
                 GestureDetector(
                   onTap: onTap,
-                  child: Text("Login now",
+                  child: Text(" Inicia sesión ahora",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Theme.of(context).colorScheme.primary)),

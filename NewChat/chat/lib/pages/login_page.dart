@@ -48,16 +48,17 @@ class LoginPage extends StatelessWidget {
           children: [
             //logo
             Icon(
-              Icons.message,
-              size: 60,
-              color: Theme.of(context).colorScheme.primary  ,
+              Icons.account_circle,
+              size: 70,
+              //color: Theme.of(context).colorScheme.primary,
+              color: Colors.blue,
             ),
 
             const SizedBox(height: 50), //Espacio entre componentes
 
             //Welcome back message
             Text(
-              "Welcome back, you've beewn missed!",
+              "¡Bienvenido de nuevo, te hemos extrañado!",
               style: TextStyle(
                 color: Theme.of(context).colorScheme.primary,
                 fontSize: 16,
@@ -78,7 +79,7 @@ class LoginPage extends StatelessWidget {
 
             //pw textfield
             MyTextField(
-              hintText: "Password",
+              hintText: "Contraseña",
               obscureText: true,
               controller: _pwController,
             ),
@@ -88,7 +89,7 @@ class LoginPage extends StatelessWidget {
             //login button
 
             MyButton(
-              text: "Login",
+              text: "Iniciar Sesión",
               onTap: () => login(context),
             ),
 
@@ -98,14 +99,14 @@ class LoginPage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Not a member? ",
+                Text("¿No tienes cuenta? ",
                 style:
                   TextStyle(color: Theme.of(context).colorScheme.primary)
                 ),
 
                 GestureDetector(
                   onTap: onTap,
-                  child: Text("Register now",
+                  child: Text(" Registrate ahora",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).colorScheme.primary)
