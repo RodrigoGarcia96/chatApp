@@ -11,29 +11,30 @@ class LoginPage extends StatelessWidget {
   //tap to go to register page
   final void Function()? onTap;
 
-  LoginPage({
-    super.key,
-    required this.onTap
-    });
+  LoginPage({super.key, required this.onTap});
 
   //Login method
-  void login(BuildContext context) async{
+  void login(BuildContext context) async {
     //auth service
     final authService = AuthService();
 
     //try login
-    try{
-      await authService.signInWithEmailPassword(_emailController.text, _pwController.text, );
+    try {
+      await authService.signInWithEmailPassword(
+        _emailController.text,
+        _pwController.text,
+      );
       _emailController.text;
       _pwController.text;
     }
 
     //cath any errors
-    catch(e){
-      showDialog(context: context,
-      builder: (context) => AlertDialog(
-        title: Text(e.toString()),
-      ),
+    catch (e) {
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(e.toString()),
+        ),
       );
     }
   }
@@ -46,6 +47,21 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            
+            /* Logo con imagen
+            DrawerHeader(
+              child: Center(
+                child: Image.asset(
+                  'assets/logo.png', // Ruta de la imagen en tu proyecto
+                  width: 15, // Ancho deseado de la imagen
+                  height: 15, // Alto deseado de la imagen
+                  color: Theme.of(context)
+                      .colorScheme
+                      .primary, // Color de la imagen
+                ),
+              ),
+            ),*/
+
             //logo
             Icon(
               Icons.account_circle,
@@ -66,7 +82,6 @@ class LoginPage extends StatelessWidget {
             ),
 
             const SizedBox(height: 25), //Espacio entre componentes
-
 
             //email textfield
             MyTextField(
@@ -100,17 +115,14 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("¿No tienes cuenta? ",
-                style:
-                  TextStyle(color: Theme.of(context).colorScheme.primary)
-                ),
-
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.primary)),
                 GestureDetector(
                   onTap: onTap,
                   child: Text(" Registrate ahora",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.primary)
-                  ),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Theme.of(context).colorScheme.primary)),
                 ),
               ],
             ),

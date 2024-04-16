@@ -24,5 +24,6 @@ class MyApp extends StatelessWidget {
       home: const AuthGate(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
+
   }
 }

@@ -20,7 +20,21 @@ class MyDrawer extends StatelessWidget {
         children: [
           Column(
             children: [
-              //logo
+              //Logo con imagen
+            DrawerHeader(
+              child: Center(
+                child: Image.asset(
+                  'assets/logo.png', // Ruta de la imagen en tu proyecto
+                  width: 59, // Ancho deseado de la imagen
+                  height: 59, // Alto deseado de la imagen
+                  color: Theme.of(context)
+                      .colorScheme
+                      .primary, // Color de la imagen
+                ),
+              ),
+            ),
+              
+              /*  Icono del drawer
               DrawerHeader(
                 child: Center(
                   child: Icon(
@@ -29,7 +43,7 @@ class MyDrawer extends StatelessWidget {
                     size: 40,
                   ),
                 ),
-              ),
+              ),  */
 
               //home list tile
               Padding(
@@ -64,6 +78,29 @@ class MyDrawer extends StatelessWidget {
                   },
                 ),
               ),
+
+              // Botón de pánico
+              Padding(
+                padding: const EdgeInsets.only(left: 25.0),
+                child: ListTile(
+                  title: const Text("¿Estas en una Emergencia?"),
+                  leading: const Icon(Icons.minor_crash),
+                  onTap: () {
+                    // pop the drawer
+                    Navigator.pop(context);
+
+                    // navigate to settings page
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SettingsPage(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+
+
             ],
           ), //Fin del contenerdor principal del drawer
 
