@@ -1,3 +1,4 @@
+import 'package:chat/pages/PantallaDeButtonRojo.dart';
 import 'package:chat/pages/settings_page.dart';
 import 'package:chat/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
@@ -93,7 +94,7 @@ class MyDrawer extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const SettingsPage(),
+                        builder: (context) => const PantallaDeButtonRoj(),
                       ),
                     );
                   },
