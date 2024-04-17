@@ -60,18 +60,28 @@ class RegisterPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            
+
             //logo
+            Icon(
+              Icons.account_circle,
+              size: 70,
+              //color: Theme.of(context).colorScheme.primary,
+              color: Colors.blue,
+            ),
+
+            /*
             Icon(
               Icons.message,
               size: 60,
               color: Theme.of(context).colorScheme.primary,
-            ),
+            ),*/
 
             const SizedBox(height: 50), //Espacio entre componentes
 
             //Welcome back message
             Text(
-              "Let´s create an account for you",
+              "Crea una cuenta para ti.",
               style: TextStyle(
                 color: Theme.of(context).colorScheme.primary,
                 fontSize: 16,
