@@ -11,6 +11,10 @@ class PantallaDeButtonRoj extends StatefulWidget {
 class _PantallaDeButtonRojState extends State<PantallaDeButtonRoj> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Botón de Emergencia"),
+      ),
+    );
   }
 }
